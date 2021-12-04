@@ -11,7 +11,7 @@ export const addUser = async (req,res)=>{
 
         const newUSer = new User(req.body);
         await newUSer.save();
-        res,status(200).json('user saved successfully');
+        res.status(200).json('user saved successfully');
     } catch (error) {
         res.status(500).json(error);
     }
